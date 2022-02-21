@@ -10,6 +10,6 @@ html: $(ADOC_FILES) $(EXTRA_FILES)
 	@docker run --rm -v $(PWD):/documents/ asciidoctor/docker-asciidoctor asciidoctor -r asciidoctor-diagram main.adoc -o .documentation/four-plus-one.html
 
 pages: html
-	@docker run --rm -v $(PWD):/documents/ asciidoctor/docker-asciidoctor asciidoctor -r asciidoctor-diagram main.adoc -o gh_pages/four-plus-one.html
+	@docker run --rm -v $(PWD):/documents/ asciidoctor/docker-asciidoctor asciidoctor -r asciidoctor-diagram main.adoc -o gh_pages/index.html
 
 all: pdf pages
