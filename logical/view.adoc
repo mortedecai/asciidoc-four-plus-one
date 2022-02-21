@@ -1,0 +1,25 @@
+= Logical View
+
+The new and improved hello world program consists of the driver and a `Greeter` class which
+determines the correct greeting to display based on the environment and paramters.
+
+== Class Diagrams
+
+[plantuml,hl_class,svg,align="center"]
+----
+@startuml
+
+hello --|> Greeter
+
+@enduml
+----
+<<<
+== State Diagrams
+
+The new hello world will use a big ball of timey-whimey-gobbeldy-gook to determine how to best
+greet the user.
+
+[plantuml,seq,svg,align="center"]
+----
+include::hello-state.puml[]
+----

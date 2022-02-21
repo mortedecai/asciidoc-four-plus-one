@@ -1,0 +1,17 @@
+= Physical View
+
+Due to it's simplistic nature, Hellos deployment plan is equally simple, and should never be done as follows:
+
+[plantuml,deployment,svg,align="center"]
+----
+@startuml
+
+folder AWS {
+    node Kubernetes {
+        node HelloPod {
+        }
+    }
+}
+
+@enduml
+----

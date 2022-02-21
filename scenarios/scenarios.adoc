@@ -1,0 +1,64 @@
+= Hello Scenarios
+
+|===
+| UC ID | Name | Description | Exp Output
+
+| HW-{counter:ucid}
+| Simple Run
+| A user calls `./hello`
+| `Hello World!`
+
+| HW-{counter:ucid}
+| Environmental Greeting
+| A user calls `./hello` with `HW_GREETING=Bonjour`
+| `Bonjour World!`
+
+| HW-{counter:ucid}
+| Environmental Name
+| A user calls `./hello` with `HW_Name=Bob`
+| `Hello Bob!`
+
+| HW-{counter:ucid}
+| Environmentally Complete
+| A user calls `./hello` with `HW_GREETING=Bonjour` and `HW_NAME=Bob`
+| `Bonjour Bob!`
+
+| HW-{counter:ucid}
+| Argumentative Greeting
+| A user calls `./hello Bonjour`
+| `Bonjour World!`
+
+| HW-{counter:ucid}
+| Totally Argumentative
+| A user calls `./hello Bonjour Bob`
+| `Bonjour Bob!`
+
+| HW-{counter:ucid}
+| Environmental Greeting Override
+| A user calls `./hello Salutations Bob` with `HW_GREETING=Bonjour`
+| `Bonjour Bob!`
+
+| HW-{counter:ucid}
+| Environmental Name Override
+| A user calls `./hello WantMore Greetings` with `HW_NAME=Seymour`
+| `WantMore Seymour!`
+
+|===
+
+<<<
+
+== This would never happen...
+
+But if we wanted to tie each of the use cases to specific source code:
+
+[source,go,linenums]
+----
+include::../development/sample.go[tag=main]
+----
+<.> HW-1 - default name
+<.> HW-1 - default greeting
+<.> HW-2, HW-4 - Environmental name override
+<.> HW-3, HW-4 - Environmental greeting override
+<.> HW-5, HW-7, HW-8 - Argument greeting override
+<.> HW-6, HW-7, HW-8 - Argument name override
+<.> All - The magic happens

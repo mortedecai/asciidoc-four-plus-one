@@ -1,0 +1,10 @@
+= Development View
+
+One thing that should be avoided is the type of checking shown here:
+
+[source,go]
+----
+include::sample.go[tag=resolution]
+----
+<.> Only use the argument if no env variable is set
+<.> Only use the argument if no env variable is set

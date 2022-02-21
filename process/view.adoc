@@ -1,0 +1,19 @@
+= Process View
+
+Wherein we discuss the effects of time and environment on output...
+
+== Sequence Diagrams
+
+[plantuml,hl_class,svg,align="center"]
+----
+@startuml
+
+hello -> Greeter
+Greeter -> OS : Check env vars
+OS --> Greeter
+Greeter -> OS : Check args
+OS --> Greeter
+Greeter --> hello : Print greeting
+
+@enduml
+----

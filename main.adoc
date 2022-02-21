@@ -1,0 +1,31 @@
+= Sample Four Plus One Architecture
+Some Author <someone@example.com>
+
+:toc: left
+:toclevels: 4
+:source-highlighter: pygments
+:icons: font
+
+:toc:
+
+== Overview
+
+A sample four plus one to describe an extremely simple and boring hello world program.
+
+:leveloffset: +1
+
+include::logical/view.adoc[]
+<<<
+include::process/view.adoc[]
+<<<
+include::development/view.adoc[]
+
+<<<
+
+include::physical/view.adoc[]
+
+<<<
+
+include::scenarios/scenarios.adoc[]
+
+:leveloffset: -1

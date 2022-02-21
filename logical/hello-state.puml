@@ -1,0 +1,18 @@
+@startuml
+
+state "Program Start" as ps
+state "Default Flow" as df
+state "Env Flow" as ef
+
+state c <<choice>>
+
+note left of c : Args Or Vars Present?
+
+[*] --> ps
+ps --> c
+c --> df : [False]
+c --> ef : [True]
+df --> [*]
+ef --> [*]
+
+@enduml

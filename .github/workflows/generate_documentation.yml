@@ -1,0 +1,34 @@
+name: AgiliTree Documentation Workflow
+
+on:
+  push:
+    paths:
+      - 'documentation/**'
+  workflow_dispatch:
+
+jobs:
+
+  docs:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
+
+    - name: Generate PDF Documentation
+      run: make pdf
+
+    - name: Generate Pages Documentation
+      run: make pages
+
+    - name: Deploy Pages
+      uses: JamesIves/github-pages-deploy-action@v4.2.5
+      with:
+        branch: gh-pages
+        folder: gh_pages
+
+    - name: Upload Documentation
+      uses: actions/upload-artifact@v2
+      with:
+        name: agiliserve-documentation
+        path: .documentation/*.pdf
