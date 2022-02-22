@@ -1,4 +1,4 @@
-name: AgiliTree Documentation Workflow
+name: AsciiDoc Sample Documentation Workflow
 
 on:
   push:
