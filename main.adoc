@@ -29,3 +29,6 @@ include::physical/view.adoc[]
 include::scenarios/scenarios.adoc[]
 
 :leveloffset: -1
+
+NOTE: This is a semi-satirical presentation of the four plus one architecture doc to demonstrate some of
+asciidoctor's capabilities.
