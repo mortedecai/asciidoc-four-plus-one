@@ -3,7 +3,8 @@ name: AgiliTree Documentation Workflow
 on:
   push:
     paths:
-      - 'documentation/**'
+      - '**/*.adoc'
+      - '**/*.puml'
   workflow_dispatch:
 
 jobs:
