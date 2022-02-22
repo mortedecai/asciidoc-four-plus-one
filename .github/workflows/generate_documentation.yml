@@ -31,5 +31,5 @@ jobs:
     - name: Upload Documentation
       uses: actions/upload-artifact@v2
       with:
-        name: agiliserve-documentation
+        name: asciidoc-samples
         path: .documentation/*.pdf
