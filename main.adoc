@@ -1,3 +1,9 @@
+ifdef::env-github[]
+:note-caption: :information_sources:
+:toc:
+:toc-placement!:
+endif::[]
+
 = Sample Four Plus One Architecture
 Some Author <someone@example.com>
 
@@ -6,7 +12,12 @@ Some Author <someone@example.com>
 :source-highlighter: pygments
 :icons: font
 
+ifndef::env-github[]
 :toc:
+endif::[]
+ifdef::env-github[]
+toc::[]
+endif::[]
 
 == Overview
 
